@@ -71,6 +71,7 @@ class DashboardPage extends StatelessWidget {
           children: [
             Expanded(
               child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 15),
                 margin: EdgeInsets.only(left: 100),
                 height: 150,
                 decoration: BoxDecoration(
@@ -84,10 +85,44 @@ class DashboardPage extends StatelessWidget {
                         offset: Offset.zero,
                       ),
                     ]),
-                child: Row(
-                  children: [
-                    Icon(Icons.book),
-                  ],
+                child: InkWell(
+                  onTap: () {},
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 120,
+                        width: 100,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage('assets/img/mobile.png'),
+                            fit: BoxFit.fitHeight,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Expanded(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Flutter App Development',
+                              style: GoogleFonts.poppins(
+                                fontSize: 22.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(
+                              'Kelas Premium',
+                              style: GoogleFonts.poppins(),
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -96,14 +131,325 @@ class DashboardPage extends StatelessWidget {
             ),
             Expanded(
               child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 15),
                 margin: EdgeInsets.only(right: 100),
                 height: 150,
                 decoration: BoxDecoration(
-                  color: Colors.green,
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black12,
+                        spreadRadius: 1.0,
+                        blurRadius: 6,
+                        offset: Offset.zero,
+                      ),
+                    ]),
+                child: InkWell(
+                  onTap: () {},
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 110,
+                        width: 110,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage('assets/img/front.png'),
+                            fit: BoxFit.fitHeight,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Expanded(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Front-End Development',
+                              style: GoogleFonts.poppins(
+                                fontSize: 22.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(
+                              'Kelas Premium',
+                              style: GoogleFonts.poppins(),
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
           ],
+        ),
+        SizedBox(
+          height: 25,
+        ),
+        Row(
+          children: [
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 15),
+                margin: EdgeInsets.only(left: 100),
+                height: 150,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black12,
+                        spreadRadius: 1.0,
+                        blurRadius: 6,
+                        offset: Offset.zero,
+                      ),
+                    ]),
+                child: InkWell(
+                  onTap: () {},
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 110,
+                        width: 110,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage('assets/img/back.png'),
+                            fit: BoxFit.fitHeight,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Expanded(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Back-end Development',
+                              style: GoogleFonts.poppins(
+                                fontSize: 22.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(
+                              'Kelas Premium',
+                              style: GoogleFonts.poppins(),
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(
+              width: 30,
+            ),
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 15),
+                margin: EdgeInsets.only(right: 100),
+                height: 150,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black12,
+                        spreadRadius: 1.0,
+                        blurRadius: 6,
+                        offset: Offset.zero,
+                      ),
+                    ]),
+                child: InkWell(
+                  onTap: () {},
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 120,
+                        width: 100,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage('assets/img/mobile.png'),
+                            fit: BoxFit.fitHeight,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Expanded(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Android Development',
+                              style: GoogleFonts.poppins(
+                                fontSize: 22.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(
+                              'Kelas Premium',
+                              style: GoogleFonts.poppins(),
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+        SizedBox(
+          height: 25,
+        ),
+        Row(
+          children: [
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 15),
+                margin: EdgeInsets.only(left: 100),
+                height: 150,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black12,
+                        spreadRadius: 1.0,
+                        blurRadius: 6,
+                        offset: Offset.zero,
+                      ),
+                    ]),
+                child: InkWell(
+                  onTap: () {},
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 110,
+                        width: 110,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage('assets/img/marketing.png'),
+                            fit: BoxFit.fitHeight,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Expanded(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Marketing',
+                              style: GoogleFonts.poppins(
+                                fontSize: 22.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(
+                              'Kelas Premium',
+                              style: GoogleFonts.poppins(),
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(
+              width: 30,
+            ),
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 15),
+                margin: EdgeInsets.only(right: 100),
+                height: 150,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black12,
+                        spreadRadius: 1.0,
+                        blurRadius: 6,
+                        offset: Offset.zero,
+                      ),
+                    ]),
+                child: InkWell(
+                  onTap: () {},
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 120,
+                        width: 100,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage('assets/img/mobile.png'),
+                            fit: BoxFit.fitHeight,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Expanded(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'React Native Development',
+                              style: GoogleFonts.poppins(
+                                fontSize: 22.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(
+                              'Kelas Premium',
+                              style: GoogleFonts.poppins(),
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+        SizedBox(
+          height: 100,
+        ),
+        Container(
+          margin: EdgeInsets.only(bottom: 30),
+          width: Get.width,
+          child: Text(
+            'Dibuat sepenuh hati oleh Irfan Maulana\n2022 KodeV Academy Karawang',
+            style: GoogleFonts.poppins(
+              fontSize: 18.0,
+              fontWeight: FontWeight.w500,
+            ),
+            textAlign: TextAlign.center,
+          ),
         ),
       ],
     ));
