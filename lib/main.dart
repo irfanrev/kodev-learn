@@ -1,3 +1,4 @@
+import 'package:codev_learn/pages/dashboard/dashboard.dart';
 import 'package:codev_learn/pages/landing_page.dart';
 import 'package:codev_learn/pages/login_page.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      home: DashboardPage(),
     );
   }
 }

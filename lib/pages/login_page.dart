@@ -1,3 +1,4 @@
+import 'package:codev_learn/pages/dashboard/dashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
@@ -138,7 +139,8 @@ class LoginPage extends StatelessWidget {
                         height: 30,
                       ),
                       InkWell(
-                        onTap: () {},
+                        onTap: () => Get.to(DashboardPage(),
+                            transition: Transition.fadeIn),
                         child: Container(
                           width: MediaQuery.of(context).size.width,
                           height: 50,
