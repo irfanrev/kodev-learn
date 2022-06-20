@@ -1,4 +1,5 @@
 import 'package:codev_learn/components/navbar.dart';
+import 'package:codev_learn/pages/dashboard/flutter/flutter_home.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -86,7 +87,37 @@ class DashboardPage extends StatelessWidget {
                       ),
                     ]),
                 child: InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Get.defaultDialog(
+                        titlePadding: EdgeInsets.all(12),
+                        contentPadding: EdgeInsets.symmetric(horizontal: 10),
+                        title: 'Masukan Key Kelas',
+                        titleStyle: GoogleFonts.poppins(),
+                        content: Container(
+                          margin: EdgeInsets.all(20),
+                          child: TextField(),
+                        ),
+                        textConfirm: 'Oke',
+                        confirm: InkWell(
+                          onTap: () => Get.to(FlutterHome()),
+                          child: Container(
+                            margin: EdgeInsets.only(bottom: 12),
+                            width: 200,
+                            height: 30,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12),
+                              color: Colors.blue,
+                            ),
+                            child: Center(
+                              child: Text('Oke',
+                                  style: GoogleFonts.poppins(
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.white,
+                                  )),
+                            ),
+                          ),
+                        ));
+                  },
                   child: Row(
                     children: [
                       Container(
