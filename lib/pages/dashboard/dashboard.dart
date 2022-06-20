@@ -9,6 +9,51 @@ class DashboardPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    void toFlutterLeasson() {
+      final TextEditingController keyC = TextEditingController();
+      final String key = 'flutter-kodev';
+
+      Get.defaultDialog(
+          titlePadding: EdgeInsets.all(12),
+          contentPadding: EdgeInsets.symmetric(horizontal: 10),
+          title: 'Masukan Key Kelas',
+          titleStyle: GoogleFonts.poppins(),
+          content: Container(
+            margin: EdgeInsets.all(20),
+            child: TextField(
+              controller: keyC,
+            ),
+          ),
+          textConfirm: 'Oke',
+          confirm: InkWell(
+            onTap: () {
+              if (keyC.text == key) {
+                Get.toNamed('/flutter-list');
+                keyC.text = '';
+              } else {
+                Get.snackbar('Error', 'Key yang dimasukan salah!',
+                    duration: Duration(seconds: 3));
+              }
+            },
+            child: Container(
+              margin: EdgeInsets.only(bottom: 12),
+              width: 200,
+              height: 30,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                color: Colors.blue,
+              ),
+              child: Center(
+                child: Text('Oke',
+                    style: GoogleFonts.poppins(
+                      fontWeight: FontWeight.w400,
+                      color: Colors.white,
+                    )),
+              ),
+            ),
+          ));
+    }
+
     return Scaffold(
         body: ListView(
       children: [
@@ -87,37 +132,7 @@ class DashboardPage extends StatelessWidget {
                       ),
                     ]),
                 child: InkWell(
-                  onTap: () {
-                    Get.defaultDialog(
-                        titlePadding: EdgeInsets.all(12),
-                        contentPadding: EdgeInsets.symmetric(horizontal: 10),
-                        title: 'Masukan Key Kelas',
-                        titleStyle: GoogleFonts.poppins(),
-                        content: Container(
-                          margin: EdgeInsets.all(20),
-                          child: TextField(),
-                        ),
-                        textConfirm: 'Oke',
-                        confirm: InkWell(
-                          onTap: () => Get.to(FlutterHome()),
-                          child: Container(
-                            margin: EdgeInsets.only(bottom: 12),
-                            width: 200,
-                            height: 30,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(12),
-                              color: Colors.blue,
-                            ),
-                            child: Center(
-                              child: Text('Oke',
-                                  style: GoogleFonts.poppins(
-                                    fontWeight: FontWeight.w400,
-                                    color: Colors.white,
-                                  )),
-                            ),
-                          ),
-                        ));
-                  },
+                  onTap: toFlutterLeasson,
                   child: Row(
                     children: [
                       Container(

@@ -2,6 +2,7 @@ import 'package:codev_learn/pages/dashboard/dashboard.dart';
 import 'package:codev_learn/pages/dashboard/flutter/flutter_home.dart';
 import 'package:codev_learn/pages/landing_page.dart';
 import 'package:codev_learn/pages/login_page.dart';
+import 'package:codev_learn/pages/register.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
@@ -20,9 +21,15 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: FlutterHome(),
+      routes: {
+        '/': (context) => const LandingPage(),
+        '/login': (context) => const LoginPage(),
+        '/register': (context) => const RegisterPage(),
+        '/dashboard': (context) => const DashboardPage(),
+        '/flutter-list': (context) => const FlutterHome(),
+      },
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:codev_learn/pages/dashboard/dashboard.dart';
+import 'package:codev_learn/services/auth_services.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
@@ -8,6 +9,8 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final AuthServices authC = Get.put(AuthServices());
+
     return Scaffold(
       body: ListView(
         children: [
@@ -15,10 +18,10 @@ class LoginPage extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 100),
             width: MediaQuery.of(context).size.width,
             height: 80,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.white,
               boxShadow: [
-                const BoxShadow(
+                BoxShadow(
                   color: Colors.grey,
                   blurRadius: 7,
                 )
@@ -47,8 +50,9 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(right: 100, top: 30, bottom: 30),
-                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  margin:
+                      const EdgeInsets.only(right: 100, top: 30, bottom: 30),
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
                   width: 400,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
@@ -71,14 +75,14 @@ class LoginPage extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 12,
                       ),
                       Text(
                         'Silahkan login menggunakan email',
                         style: GoogleFonts.poppins(),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Container(
@@ -91,13 +95,14 @@ class LoginPage extends StatelessWidget {
                         ),
                         child: Row(
                           children: [
-                            const Icon(Icons.email),
+                            Icon(Icons.email),
                             const SizedBox(
                               width: 10,
                             ),
-                            const Expanded(
+                            Expanded(
                               child: TextField(
-                                decoration: InputDecoration(
+                                controller: authC.emailC,
+                                decoration: const InputDecoration(
                                   hintText: 'Email',
                                   border: InputBorder.none,
                                 ),
@@ -106,7 +111,7 @@ class LoginPage extends StatelessWidget {
                           ],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 12,
                       ),
                       Container(
@@ -125,8 +130,9 @@ class LoginPage extends StatelessWidget {
                             ),
                             Expanded(
                               child: TextField(
+                                controller: authC.passC,
                                 obscureText: true,
-                                decoration: InputDecoration(
+                                decoration: const InputDecoration(
                                   hintText: 'Password',
                                   border: InputBorder.none,
                                 ),
@@ -139,8 +145,7 @@ class LoginPage extends StatelessWidget {
                         height: 30,
                       ),
                       InkWell(
-                        onTap: () => Get.to(DashboardPage(),
-                            transition: Transition.fadeIn),
+                        onTap: () => authC.signIn(),
                         child: Container(
                           width: MediaQuery.of(context).size.width,
                           height: 50,
@@ -170,7 +175,7 @@ class LoginPage extends StatelessWidget {
                             style: GoogleFonts.poppins(),
                           ),
                           TextButton(
-                            onPressed: () {},
+                            onPressed: () => Get.toNamed('/register'),
                             child: Text(
                               'Register',
                               style: GoogleFonts.poppins(),

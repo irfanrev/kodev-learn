@@ -30,7 +30,7 @@ class LandingPage extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         Text(
@@ -38,7 +38,7 @@ class LandingPage extends StatelessWidget {
                           style: GoogleFonts.poppins(
                               fontSize: 16.0, fontWeight: FontWeight.w500),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 30,
                         ),
                         InkWell(
@@ -68,7 +68,7 @@ class LandingPage extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(right: 100),
+                  margin: const EdgeInsets.only(right: 100),
                   width: 400,
                   height: 400,
                   child: Image.asset('assets/img/study.png'),

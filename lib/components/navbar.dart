@@ -1,4 +1,5 @@
 import 'package:codev_learn/pages/login_page.dart';
+import 'package:codev_learn/pages/register.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
@@ -31,12 +32,7 @@ class Navbar extends StatelessWidget {
           Row(
             children: [
               InkWell(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: ((context) {
-                    return LoginPage();
-                  })));
-                },
+                onTap: () => Get.toNamed('/login'),
                 enableFeedback: true,
                 child: Container(
                   width: 100,
@@ -60,7 +56,7 @@ class Navbar extends StatelessWidget {
                 width: 5,
               ),
               InkWell(
-                onTap: () {},
+                onTap: () => Get.toNamed('/register'),
                 enableFeedback: true,
                 child: Container(
                   width: 100,
